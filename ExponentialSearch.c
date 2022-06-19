@@ -26,7 +26,7 @@ int exponential_search(int arr[], int size, int value)
     int xpt = 1, cnt = 0, index, start, end;
 
     if (arr[0] == value) return 0;
-    else if (arr[size-1] < value) return -1;
+    else if (arr[size-1] < value || value < arr[0]) return -1;
 
     while (arr[(xpt<<cnt)] < value)
     {   
